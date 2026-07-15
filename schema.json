@@ -1,0 +1,14 @@
+{
+  "delimiter": "|",
+  "chunk_rows": 1000,
+  "columns": [
+    {"name": "ts", "type": "delta"},
+    {"name": "ip", "type": "dict"},
+    {"name": "method", "type": "dict"},
+    {"name": "path", "type": "dict"},
+    {"name": "status", "type": "dict"},
+    {"name": "resp_ms", "type": "text"},
+    {"name": "level", "type": "dict"},
+    {"name": "msg", "type": "text"}
+  ]
+}
