@@ -1,0 +1,67 @@
+# Telemetry Reliability CI
+
+Telemetry Reliability CI is a lightweight, offline toolkit for evaluating the robustness of a telemetry anomaly-detection baseline against controlled data-quality faults.
+
+The project is intentionally synthetic and educational. It is designed to help developers benchmark detection logic under realistic but reproducible fault scenarios without requiring paid cloud APIs or large external datasets.
+
+## What this MVP includes
+
+- Synthetic telemetry generation with configurable noise, drift, and anomaly labels
+- Fault injection for missing readings, drift, stuck values, and short spikes
+- A simple statistical baseline anomaly detector
+- Evaluation metrics: precision, recall, F1, and false-positive counts
+- CSV export and plot generation for comparison studies
+- Streamlit interface for interactive experiments
+- Pytest coverage for generation, faults, metrics, and reports
+
+## Project structure
+
+```text
+telemetry_reliability_ci/
+├── __init__.py
+├── __main__.py
+├── app.py
+├── detection.py
+├── evaluation.py
+├── fault_injection.py
+├── reporting.py
+├── simulation.py
+├── README.md
+├── requirements.txt
+├── .gitignore
+├── tests/
+│   ├── __init__.py
+│   └── test_project.py
+└── output/
+    └── generated_reports_here
+```
+
+## Setup
+
+```bash
+cd telemetry_reliability_ci
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+```
+
+## Run the Streamlit app
+
+```bash
+cd telemetry_reliability_ci
+streamlit run app.py
+```
+
+## Run tests
+
+```bash
+cd telemetry_reliability_ci
+pytest -q
+```
+
+## Notes
+
+- This is a developer-friendly baseline for offline experimentation.
+- Synthetic labels are kept separate from detection outputs.
+- The baseline should be treated as a benchmark, not a flight-proven model.
